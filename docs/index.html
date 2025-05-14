@@ -121,42 +121,89 @@
                     <h3 class="text-xl font-semibold text-indigo-700 mb-3">Cost-Effective</h3>
                     <p class="text-gray-600">Save significantly on rent, utilities, and maintenance costs compared to a traditional office.</p>
                 </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6 shadow-md"> <!-- M3 icon container -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /> <!-- Clock icon -->
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Lightning Fast Setup</h3>
+                    <p class="text-gray-600">Get your virtual office address and services activated within 12 hours.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-16 md:py-24 bg-indigo-600 text-white"> <!-- Adjusted bg color -->
+    <section id="pricing" class="py-16 md:py-24 bg-indigo-600 text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-indigo-200 max-w-xl mx-auto mb-12 text-lg"> <!-- Increased text size and margin -->
-                One unbeatable price for your virtual office needs. No hidden fees, no complex tiers.
+            <p class="text-indigo-200 max-w-xl mx-auto mb-12 md:mb-16 text-lg"> <!-- Increased bottom margin -->
+                Choose the plan that fits your business needs. No hidden fees, no complex tiers.
             </p>
-            <div class="bg-white text-gray-800 p-10 rounded-3xl shadow-xl max-w-md mx-auto transform hover:scale-105 transition-transform duration-300"> <!-- M3 card style -->
-                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Standard Plan</h3>
-                <p class="text-5xl font-bold my-6 text-indigo-700"> <!-- Adjusted color -->
-                    ₹499<span class="text-xl font-normal text-gray-500">/month</span>
-                </p>
-                <ul class="text-left space-y-4 text-gray-700 mb-10"> <!-- Adjusted spacing and color -->
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        Premium Business Address
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        Mail & Package Handling
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        Access to All NCR Locations
-                    </li>
-                     <li class="flex items-center">
-                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        GST Registration Address (Optional)
-                    </li>
-                </ul>
-                <a href="#contact" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg cta-button inline-block"> <!-- M3 style button -->
-                    Sign Up Now
-                </a>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"> <!-- Grid for two plans -->
+
+                <!-- Basic Plan Card -->
+                <div class="bg-white text-gray-800 p-8 md:p-10 rounded-3xl shadow-xl flex flex-col justify-between transform hover:scale-105 transition-transform duration-300"> <!-- M3 card style, flex for button alignment -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Basic Plan</h3>
+                        <p class="text-5xl font-bold my-6 text-indigo-700">
+                            ₹499<span class="text-xl font-normal text-gray-500">/month</span>
+                        </p>
+                        <p class="text-xs text-gray-500 mb-6">(Billed Annually, Non-GST)</p>
+                        <ul class="text-left space-y-4 text-gray-700 mb-10">
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Premium Business Address
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Mail & Package Handling
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Access to All NCR Locations
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-gray-200 hover:bg-gray-300 text-indigo-700 font-bold py-3 px-8 rounded-full text-lg cta-button inline-block mt-auto"> <!-- M3 style button - secondary -->
+                        Choose Basic
+                    </a>
+                </div>
+
+                <!-- Pro Plan Card (Popular) -->
+                <div class="relative bg-white text-gray-800 p-8 md:p-10 rounded-3xl shadow-2xl ring-4 ring-yellow-400 flex flex-col justify-between transform hover:scale-105 transition-transform duration-300"> <!-- M3 card style, ring for popular, flex for button -->
+                    <div class="absolute top-0 right-0 -mt-4 -mr-0">
+                        <span class="bg-yellow-400 text-indigo-700 text-xs font-bold px-4 py-1.5 rounded-full shadow-md">POPULAR</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Pro Plan</h3>
+                        <p class="text-5xl font-bold my-6 text-indigo-700">
+                            ₹799<span class="text-xl font-normal text-gray-500">/month</span>
+                        </p>
+                        <p class="text-xs text-gray-500 mb-6">(Billed Annually, Inclusive of GST)</p>
+                        <ul class="text-left space-y-4 text-gray-700 mb-10">
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Premium Business Address
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Mail & Package Handling
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                Access to All NCR Locations
+                            </li>
+                            <li class="flex items-center font-semibold text-indigo-700"> <!-- Highlighted feature -->
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                GST Registration Address
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg cta-button inline-block mt-auto"> <!-- M3 style button - primary -->
+                        Choose Pro
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -328,7 +375,6 @@
         //             messageBox.style.zIndex = '1001';
         //             messageBox.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
         //             messageBox.style.textAlign = 'center';
-        //             messageBox.textContent = message;
         //             document.body.appendChild(messageBox);
         //             setTimeout(() => {
         //                 if(document.body.contains(messageBox)) {
