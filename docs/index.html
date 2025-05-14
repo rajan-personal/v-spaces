@@ -11,7 +11,7 @@
             font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080/6366F1/E0E7FF?text=Modern+Office+Space');
+            background-image: linear-gradient(to right, rgba(26, 32, 44, 0.7), rgba(49, 46, 129, 0.6)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80'); /* Updated hero image and overlay */
             background-size: cover;
             background-position: center;
         }
@@ -20,47 +20,65 @@
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Enhanced hover shadow */
         }
         /* Custom scrollbar for better aesthetics (optional) */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #e2e8f0; /* Lighter track */
         }
         ::-webkit-scrollbar-thumb {
-            background: #4F46E5; /* Indigo-600 */
+            background: #4f46e5; /* Indigo-600 */
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #4338CA; /* Indigo-700 */
+            background: #4338ca; /* Indigo-700 */
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50 top-0 border-b border-gray-200"> <!-- M3 style nav with blur and border -->
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-indigo-600">VirtualSpace<span class="text-gray-700">NCR</span></a>
-            <div class="space-x-4">
-                <a href="#features" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Features</a>
-                <a href="#pricing" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
-                <a href="#locations" class="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Locations</a>
-                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium cta-button">Get Started</a>
+            
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
+
+            <!-- Desktop Menu -->
+            <div id="desktop-menu" class="hidden md:flex space-x-2 items-center"> <!-- Adjusted spacing and added items-center -->
+                <a href="#features" class="text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-full text-sm font-medium transition-colors duration-150">Features</a>
+                <a href="#pricing" class="text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-full text-sm font-medium transition-colors duration-150">Pricing</a>
+                <a href="#locations" class="text-gray-700 hover:text-indigo-600 px-4 py-2 rounded-full text-sm font-medium transition-colors duration-150">Locations</a>
+                <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm font-medium cta-button">Get Started</a>
+            </div>
+        </div>
+        <!-- Mobile Menu (Initially Hidden) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
+            <a href="#features" class="block text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 px-6 py-3 text-sm font-medium transition-colors duration-150">Features</a>
+            <a href="#pricing" class="block text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 px-6 py-3 text-sm font-medium transition-colors duration-150">Pricing</a>
+            <a href="#locations" class="block text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 px-6 py-3 text-sm font-medium transition-colors duration-150">Locations</a>
+            <a href="#contact" class="block bg-indigo-600 hover:bg-indigo-700 text-white text-center mx-4 my-3 px-5 py-2.5 rounded-full text-sm font-medium cta-button">Get Started</a>
         </div>
     </nav>
 
-    <header class="hero-bg text-white pt-32 pb-20 md:pt-48 md:pb-32">
+    <header class="hero-bg text-white pt-36 pb-24 md:pt-48 md:pb-36"> <!-- Adjusted padding -->
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Your Professional Business Address in Delhi NCR
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"> <!-- Slightly adjusted H1 size -->
+                Your Professional Business Address anywhere in Delhi NCR
             </h1>
-            <p class="text-lg md:text-2xl mb-8 text-indigo-200">
-                Affordable Virtual Office Spaces starting at just <span class="font-bold text-yellow-400">₹499 per month</span>.
+            <p class="text-lg md:text-xl mb-10 text-indigo-100"> <!-- Adjusted P size and color -->
+                Affordable Virtual Office Spaces starting at just <span class="font-bold text-yellow-300">₹499 per month</span>. <!-- Adjusted yellow -->
             </p>
-            <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-700 font-bold py-4 px-10 rounded-lg text-lg cta-button">
+            <a href="#contact" class="bg-yellow-400 hover:bg-yellow-500 text-indigo-700 font-bold py-3 px-8 rounded-full text-lg cta-button"> <!-- M3 style button -->
                 Claim Your Virtual Space Today
             </a>
         </div>
@@ -70,13 +88,13 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">Why Choose Our Virtual Spaces?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg"> <!-- Increased text size -->
                     Establish your business presence in prime locations without the overhead of a physical office. Perfect for startups, freelancers, and growing businesses.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-500 text-white mb-6 shadow-md">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6 shadow-md"> <!-- M3 icon container -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -85,8 +103,8 @@
                     <h3 class="text-xl font-semibold text-indigo-700 mb-3">Prime Business Address</h3>
                     <p class="text-gray-600">Get a prestigious address in key business hubs of Delhi NCR to enhance your company's image.</p>
                 </div>
-                <div class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                     <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-500 text-white mb-6 shadow-md">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                     <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6 shadow-md"> <!-- M3 icon container -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
@@ -94,8 +112,8 @@
                     <h3 class="text-xl font-semibold text-indigo-700 mb-3">Mail Handling</h3>
                     <p class="text-gray-600">Secure mail and package receiving, with options for forwarding or scanning.</p>
                 </div>
-                <div class="bg-gray-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-500 text-white mb-6 shadow-md">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                    <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-600 mb-6 shadow-md"> <!-- M3 icon container -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -107,98 +125,98 @@
         </div>
     </section>
 
-    <section id="pricing" class="py-16 md:py-24 bg-indigo-700 text-white">
+    <section id="pricing" class="py-16 md:py-24 bg-indigo-600 text-white"> <!-- Adjusted bg color -->
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-indigo-200 max-w-xl mx-auto mb-10">
+            <p class="text-indigo-200 max-w-xl mx-auto mb-12 text-lg"> <!-- Increased text size and margin -->
                 One unbeatable price for your virtual office needs. No hidden fees, no complex tiers.
             </p>
-            <div class="bg-white text-gray-800 p-10 rounded-xl shadow-2xl max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
-                <h3 class="text-2xl font-semibold text-indigo-600 mb-2">Standard Plan</h3>
-                <p class="text-5xl font-bold my-6">
+            <div class="bg-white text-gray-800 p-10 rounded-3xl shadow-xl max-w-md mx-auto transform hover:scale-105 transition-transform duration-300"> <!-- M3 card style -->
+                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Standard Plan</h3>
+                <p class="text-5xl font-bold my-6 text-indigo-700"> <!-- Adjusted color -->
                     ₹499<span class="text-xl font-normal text-gray-500">/month</span>
                 </p>
-                <ul class="text-left space-y-3 text-gray-600 mb-8">
+                <ul class="text-left space-y-4 text-gray-700 mb-10"> <!-- Adjusted spacing and color -->
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                         Premium Business Address
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                         Mail & Package Handling
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                         Access to All NCR Locations
                     </li>
                      <li class="flex items-center">
-                        <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                         GST Registration Address (Optional)
                     </li>
                 </ul>
-                <a href="#contact" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg text-lg cta-button inline-block">
+                <a href="#contact" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg cta-button inline-block"> <!-- M3 style button -->
                     Sign Up Now
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="locations" class="py-16 md:py-24 bg-white">
+    <section id="locations" class="py-16 md:py-24 bg-gray-50"> <!-- Changed bg to gray-50 -->
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">Serving Key Delhi NCR Regions</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg"> <!-- Increased text size -->
                     Choose a virtual office in the location that best suits your business needs.
                 </p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/300x200/A5B4FC/3730A3?text=Gurgaon+Skyline" alt="Gurgaon" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Gurgaon';">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                    <img src="https://images.unsplash.com/photo-1601121982734-194c68c9e018?auto=format&fit=crop&w=300&h=200&q=60" alt="Gurgaon" class="w-full h-40 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Image+Not+Found';">
                     <h3 class="text-xl font-semibold text-indigo-700">Gurgaon</h3>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/300x200/C7D2FE/3730A3?text=Delhi+Landmark" alt="Delhi" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Delhi';">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                    <img src="https://images.unsplash.com/photo-1588997900097-a0469a53c044?auto=format&fit=crop&w=300&h=200&q=60" alt="Delhi" class="w-full h-40 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Image+Not+Found';">
                     <h3 class="text-xl font-semibold text-indigo-700">Delhi</h3>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/300x200/A5B4FC/3730A3?text=Ghaziabad+Hub" alt="Ghaziabad" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Ghaziabad';">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                    <img src="https://images.unsplash.com/photo-1624599889005-a38a500e2ea5?auto=format&fit=crop&w=300&h=200&q=60" alt="Ghaziabad" class="w-full h-40 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Image+Not+Found';">
                     <h3 class="text-xl font-semibold text-indigo-700">Ghaziabad</h3>
                 </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-                    <img src="https://placehold.co/300x200/C7D2FE/3730A3?text=Noida+Tech+Park" alt="Noida" class="w-full h-40 object-cover rounded-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Noida';">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"> <!-- M3 card style -->
+                    <img src="https://images.unsplash.com/photo-1572088454198-781e7839aa14?auto=format&fit=crop&w=300&h=200&q=60" alt="Noida" class="w-full h-40 object-cover rounded-xl mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/E0E7FF/4F46E5?text=Image+Not+Found';">
                     <h3 class="text-xl font-semibold text-indigo-700">Noida</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-16 md:py-24 bg-gray-100">
+    <section id="contact" class="py-16 md:py-24 bg-gray-100"> <!-- Adjusted bg -->
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">Get Your Virtual Space Today!</h2>
-                <p class="text-gray-600 max-w-xl mx-auto">
+                <p class="text-gray-600 max-w-xl mx-auto text-lg"> <!-- Increased text size -->
                     Fill out the form below, and our team will get in touch with you shortly.
                 </p>
             </div>
-            <div class="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+            <div class="max-w-2xl mx-auto bg-white p-8 md:p-10 rounded-3xl shadow-xl"> <!-- M3 card style -->
                 <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="grid md:grid-cols-2 gap-x-6 gap-y-6 mb-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                            <input type="text" name="name" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out" placeholder="e.g., Rohan Sharma">
+                            <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-150 ease-in-out placeholder-gray-400" placeholder="e.g., Rohan Sharma">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                            <input type="email" name="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out" placeholder="you@example.com">
+                            <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-150 ease-in-out placeholder-gray-400" placeholder="you@example.com">
                         </div>
                     </div>
                     <div class="mb-6">
                         <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out" placeholder="+91 XXXXX XXXXX">
+                        <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-150 ease-in-out placeholder-gray-400" placeholder="+91 XXXXX XXXXX">
                     </div>
                     <div class="mb-6">
                         <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Preferred Location</label>
-                        <select id="location" name="location" required class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out bg-white">
+                        <select id="location" name="location" required class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-150 ease-in-out">
                             <option value="" disabled selected>Select a location</option>
                             <option value="Gurgaon">Gurgaon</option>
                             <option value="Delhi">Delhi</option>
@@ -209,14 +227,14 @@
                     </div>
                     <div class="mb-8">
                         <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message / Requirements</label>
-                        <textarea name="message" id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out" placeholder="Tell us a bit about your needs..."></textarea>
+                        <textarea name="message" id="message" rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white transition duration-150 ease-in-out placeholder-gray-400" placeholder="Tell us a bit about your needs..."></textarea>
                     </div>
                     <div>
-                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg text-lg cta-button focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full text-lg cta-button focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"> <!-- M3 style button -->
                             Send Enquiry
                         </button>
                     </div>
-                     <p class="text-xs text-gray-500 mt-4 text-center">
+                     <p class="text-xs text-gray-500 mt-6 text-center"> <!-- Adjusted margin -->
                         We respect your privacy. Your information will not be shared.
                     </p>
                 </form>
@@ -224,9 +242,9 @@
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-gray-300 py-12">
+    <footer class="bg-gray-800 text-gray-400 py-12"> <!-- Adjusted text color -->
         <div class="container mx-auto px-6 text-center">
-            <a href="#" class="text-xl font-bold text-indigo-400">VirtualSpace<span class="text-gray-100">NCR</span></a>
+            <a href="#" class="text-xl font-bold text-indigo-400">VirtualSpace<span class="text-gray-200">NCR</span></a>
             <p class="my-4 text-sm">
                 Providing affordable virtual office solutions in Delhi, Gurgaon, Noida, and Ghaziabad.
             </p>
@@ -244,63 +262,86 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80; // Adjusted for fixed nav height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const desktopMenu = document.getElementById('desktop-menu'); // To ensure it's hidden if JS is on
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Optional: Change hamburger to X icon
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuButton.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+                } else {
+                    mobileMenuButton.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+                });
+            });
+        }
+
         // Simple alert for form submission if not using a service like Formspree
         // const contactForm = document.querySelector('#contact form');
-        // if (contactForm.action.includes('YOUR_FORMSPREE_ID')) { // Check if default Formspree ID is still there
+        // if (contactForm && contactForm.action.includes('YOUR_FORMSPREE_ID')) { // Check if default Formspree ID is still there
         //     contactForm.addEventListener('submit', function(e) {
         //         e.preventDefault();
-        //         // You would typically validate the form here before showing the alert
         //         let isValid = true;
         //         this.querySelectorAll('[required]').forEach(input => {
-        //             if (!input.value) isValid = false;
+        //             if (!input.value && input.type !== 'submit') isValid = false;
         //         });
 
-        //         if (isValid) {
-        //             // Create a custom message box instead of alert
+        //         const createMessageBox = (message, bgColor) => {
+        //             const existingBox = document.getElementById('form-message-box');
+        //             if(existingBox) existingBox.remove();
+
         //             const messageBox = document.createElement('div');
+        //             messageBox.id = 'form-message-box';
         //             messageBox.style.position = 'fixed';
-        //             messageBox.style.top = '20px';
+        //             messageBox.style.top = '80px'; // Below nav
         //             messageBox.style.left = '50%';
         //             messageBox.style.transform = 'translateX(-50%)';
-        //             messageBox.style.backgroundColor = '#4CAF50'; // Green
+        //             messageBox.style.backgroundColor = bgColor;
         //             messageBox.style.color = 'white';
-        //             message_box.style.padding = '15px 25px';
-        //             message_box.style.borderRadius = '8px';
-        //             message_box.style.zIndex = '1000';
-        //             message_box.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
-        //             message_box.textContent = 'Form submitted successfully! (This is a demo. Configure Formspree for actual submissions.)';
+        //             messageBox.style.padding = '12px 20px';
+        //             messageBox.style.borderRadius = '8px';
+        //             messageBox.style.zIndex = '1001';
+        //             messageBox.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+        //             messageBox.style.textAlign = 'center';
+        //             messageBox.textContent = message;
         //             document.body.appendChild(messageBox);
         //             setTimeout(() => {
-        //                 document.body.removeChild(messageBox);
-        //             }, 5000); // Remove after 5 seconds
+        //                 if(document.body.contains(messageBox)) {
+        //                     document.body.removeChild(messageBox);
+        //                 }
+        //             }, isValid ? 5000 : 3000);
+        //         };
+
+        //         if (isValid) {
+        //             createMessageBox('Form submitted successfully! (This is a demo. Configure Formspree for actual submissions.)', '#4CAF50'); // Green
         //             this.reset(); // Reset form fields
         //         } else {
-        //             // Create a custom error message box
-        //             const errorBox = document.createElement('div');
-        //             errorBox.style.position = 'fixed';
-        //             errorBox.style.top = '20px';
-        //             errorBox.style.left = '50%';
-        //             errorBox.style.transform = 'translateX(-50%)';
-        //             errorBox.style.backgroundColor = '#f44336'; // Red
-        //             errorBox.style.color = 'white';
-        //             errorBox.style.padding = '15px 25px';
-        //             errorBox.style.borderRadius = '8px';
-        //             errorBox.style.zIndex = '1000';
-        //             errorBox.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
-        //             errorBox.textContent = 'Please fill in all required fields.';
-        //             document.body.appendChild(errorBox);
-        //             setTimeout(() => {
-        //                 document.body.removeChild(errorBox);
-        //             }, 3000);
+        //             createMessageBox('Please fill in all required fields.', '#f44336'); // Red
         //         }
         //     });
         // }
